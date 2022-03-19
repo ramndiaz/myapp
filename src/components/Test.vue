@@ -8,6 +8,11 @@
         {{ task }}
       </li>
     </ul>
+    <input type="text" name="" v-on:keyup.enter="function2">
+    <input type="text" name="" v-model="user.name">
+    <input type="text" name="" v-model="user.age">
+    <button type="button" v-on:click="function1(user.name)">send</button>
+    <hr>
   </div>
 </template>
 
@@ -16,7 +21,7 @@ export default {
   name: 'Test',
   data () {
     return {
-      msg: 'test',
+      msg: 'Test Component',
       user: {
         name: 'pedro',
         age: 29
@@ -30,6 +35,14 @@ export default {
         {name: 'play'}
       ]
     }
+  },
+  methods:{
+      function1(name){
+        alert("klk " + name)
+      },
+      function2(e){
+        console.log(e.target.value)
+      }
   }
 }
 </script>
