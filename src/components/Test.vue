@@ -1,8 +1,8 @@
 <template>
   <div class="test">
-    <h1>{{ msg }}</h1>
-    <h1>{{ user.name }}</h1>
-    <h1>{{ user }}</h1>
+    <p>{{ msg }}</p>
+    <p>{{ user.name }}</p>
+    <p>{{ user }}</p>
     <ul>
       <li v-for="task in tasks" :key="task.name">
         {{ task }}
@@ -49,18 +49,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.test{
+  background-color: aqua;
 }
 </style>
